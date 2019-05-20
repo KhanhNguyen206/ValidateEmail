@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Email</title>
+</head>
+<body>
+<script>
+    function check(str) {
+        let regexp = /^[0-9a-zA-Z]+[0-9a-zA-Z]*@+[a-zA-Z0-9]+\.+[a-zA-Z0-9]+?/;
+        if(regexp.test(str)){
+            return "Đây là email hợp lệ";
+        }else{
+            return "Đây là email không hợp lệ";
+        }
+    }
+
+    console.log(check("a@gmail.com"));
+    console.log(check("ab@yahoo.com"));
+    console.log(check("abc@hotmail.com"));
+    console.log(check("@gmail.com"));
+    console.log(check("ab@gmail."));
+    console.log(check("@#abc@gmail.com"));
+
+</script>
+</body>
+</html>
